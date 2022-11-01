@@ -39,7 +39,7 @@ public class ApiCoreRequests {
     }
 
     @Step("Make a GET-request without token and cookie")
-    public Response makeGetSimpleRequest(String url) {
+    public Response makeGetUnauthorisedRequest(String url) {
         return given()
                 .filter(new AllureRestAssured())
                 .get(url)

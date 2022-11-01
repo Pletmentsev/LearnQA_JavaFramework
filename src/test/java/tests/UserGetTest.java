@@ -26,7 +26,7 @@ public class UserGetTest extends BaseTestCase {
     @DisplayName("Unauthorized user")
     public void testGetUserDataNotAuth() {
         Response responseUserData = apiCoreRequests
-                .makeGetSimpleRequest("https://playground.learnqa.ru/api/user/2");
+                .makeGetUnauthorisedRequest("https://playground.learnqa.ru/api/user/2");
 
         Assertions.assertJsonHasField(responseUserData, "username");
         Assertions.assertJsonHasNotField(responseUserData, "firstName");
